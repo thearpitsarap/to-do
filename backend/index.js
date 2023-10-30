@@ -1,10 +1,10 @@
 const express = require('express')
-const { connectDB } = require('./utils/connection')
-const { TaskModel1 } = require("./utils/models/schema")
-const { userModel } = require("./utils/models/userSchema")
+const { connectDB } = require('./src/utils/connection')
+const { TaskModel1 } = require("./src/utils/models/schema")
+const { userModel } = require("./src/utils/models/userSchema")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
-const {validateToken} = require('./validateToken')
+const {validateToken} = require('./src/validateToken')
 
 let app = express();
 app.use(express.json())
