@@ -13,6 +13,10 @@ const MySchema = new Schema({
     createdAt:{
         type:Date,
         default:Date.now
+    },
+    role:{
+        type:String,
+        default:"user"
     }
 })
 
