@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app
+  name: backendtodo-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-app
+      app: backendtodo-app
   template:
     metadata:
       labels:
-        app: node-app
+        app: backendtodo-app
     spec:
       containers:
-      - name: node-app
-        image: <your-node-app-image>
+      - name: backendtodo-app
+        image: <image>
         ports:
         - containerPort: 3000
