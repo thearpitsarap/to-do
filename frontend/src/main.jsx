@@ -1,10 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import './index.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Todos from '../src/pages/todos.jsx';
+import App from './App.jsx'; // replace this with your other components
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+function Main() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/todos" component={Todos} />
+        <Route path="/" component={App} /> {/* replace this with your other routes */}
+      </Switch>
+    </Router>
+  );
+}
+
+export default Main;

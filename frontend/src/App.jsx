@@ -1,6 +1,7 @@
 import "./index.css";
 import TodoFooter from './components/todo_footer';
 import TodoNavbar from "./components/todo_navbar";
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,12 +19,12 @@ function App() {
           track of your personal to-do list, My Todo App has everything you need
           to stay organized and productive.
         </p>
-        <a
-          href="#"
+        <Link
+          to="/todos"
           className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
         >
           Get Started
-        </a>
+        </Link>
       </main>
       <TodoFooter></TodoFooter>
     </>
