@@ -1,9 +1,9 @@
 
-export default function todo_navbar() {
+export default function TodoNavbar() {
     return (
         <>
-            <header className="bg-gray-800 text-white">
-                <div className="container mx-auto py-4 px-6 flex justify-between items-center">
+            <header className="text-white bg-gray-800">
+                <div className="container flex items-center justify-between px-6 py-4 mx-auto">
                     <h1 className="text-2xl font-bold">My Todo App</h1>
                 </div>
             </header>
