@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import List from "./components/todo_component";
+import TodoFooter from './components/todo_footer';
+import TodoNavbar from "./components/todo_navbar";
 
 const Todos = () => {
 	const [todos, setTodos] = useState([]);
@@ -15,6 +17,7 @@ const Todos = () => {
 
 	return (
 		<>
+			<TodoNavbar></TodoNavbar>
 			<div className="flex p-4 m-4 sm">
 				<input
 					type="text"
@@ -28,7 +31,10 @@ const Todos = () => {
 					+
 				</button>
 			</div>
-			<List todos={todos} />
+			<div className='p-4 m-4'>
+				<List todos={todos} />
+			</div>
+			<TodoFooter></TodoFooter>
 		</>
 	);
 };
@@ -38,6 +44,18 @@ export default Todos;
 // dummy data
 async function fetchTodos() {
     return [
+		{
+			id: 1,
+			title: 'Buy milk',
+		},
+		{
+			id: 2,
+			title: 'Do laundry',
+		},
+		{
+			id: 3,
+			title: 'Learn React',
+		},
     ];
 }
 
